@@ -24,7 +24,7 @@
 }
 .body_img{
 	width: 100%;/*body_img在body内，这里的100%是指75%的100%*/
-	height: 400px;
+	height: 375px;
 	background-color: darkgray;
 }
 .body_content{
@@ -34,7 +34,7 @@
 }
 .body_no{
 	width: 100%;
-	height: 50px;
+	height: 25px;
 	background-color: aqua;
 }
 .footing{
@@ -62,7 +62,7 @@ ul{
 	width: auto;
 	height:50px;
 	text-align:center;
-        font-size:50px;
+        font-size:25px;
 }
 a:link, a:visited{
 	font-weight: bld;
@@ -84,29 +84,29 @@ li{
 }
 	
 .dh{
-	width: 100px;
-	height: 100px;
+	width: 100%;
+	height: 375px;
 	background-color: red;
 	position: relative;/*相对布局，可进行不占位的移动操作*/
 	animation: anim 5s infinite alternate;/*anim是起的动画名称，加上infinite alternate使得动画一直执行*/
 }
 @keyframes anim{
 	0%{background-color: red;left: 0px;top: 0px}
-	25%{background-color: green;left: 200px;top: 0px;}
-	50%{background-color: yellow;left: 200px;top: 200px}
-	75%{background-color: #00ffff;left: 0px;top: 200px;}
+	25%{background-color: green;left: 100%;top: 0px;}
+	50%{background-color: yellow;left: 100%;top: 375px}
+	75%{background-color: #00ffff;left: 0px;top: 375px;}
 	100%{background-color: red;left: 0px;top: 0px;}
 }
 
 .container{
-	column-width: 250px;
-	-ms-column-width:250px;
+	column-width: 50px;
+	-ms-column-width:50px;
 	column-gap: 5px;
 	-ms-column-gap:5px;
 
 }
 .container div{
-	width: 250px;
+	width: 50px;
 	margin: 5px 0;
 
 }
