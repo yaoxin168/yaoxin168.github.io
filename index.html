@@ -1,196 +1,141 @@
 <style>
-*{
+	
+	*{
 	margin: 0px;
 	padding: 0px;
 }
-.top{
-        
-	width: 100%;
-	height: 50px;
-	background-color: black;
-	
+body{
+	background-color: snow;
 }
-.top_content{
-	width: 75%;
-	height: 50px;
-	margin: 0px auto;/*因为宽为75%，所以把左右设为auto会有居中效果*/
-	background-color: yellow;
-}
-.body{
-	margin: 20px auto;
-	width: 75%;
-	height: 1500px;
-	background-color: blanchedalmond;
-}
-.body_img{
-	width: 100%;/*body_img在body内，这里的100%是指75%的100%*/
-	height: 375px;
-	background-color: darkgray;
-}
-.body_content{
-	width: 100%;
-	height: 1100px;/*把1500分成了400+1100*/
-	background-color: blueviolet;
-}
-.body_no{
-	width: 100%;
-	height: 25px;
-	background-color: aqua;
-}
-.footing{
-	width: 75%;
-	height: 400px;
-	background-color: indigo;
+.wrapper{
+	width: 80%;
+	height: 1000px;
+	background-color: antiquewhite;
 	margin: 0px auto;
 }
-.footing_content{
+.heading{
 	width: 100%;
-	height: 350px;
-	background-color: darkseagreen;
+	height: 90px;
+	background-color: snow;
+	margin: 0px auto;
 }
-.footing_subnav{
+.heading_title{
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	color: burlywood;/*字体颜色*/
+}
+.heading_nav{
+	padding-top: 30px;
+	padding-bottom: 30px;
 	width: 100%;
-	height: 50px;
-	background-color: black;
+	height: 30px;/*整个头部30px*/
+	position: relative;
 }
-
 ul{
-	list-style-type: none;/*去掉字体前面的点*/
-	margin: 0px;
-	padding: 0px;
-	background-color: burlywood;
-	width: auto;
-	height:50px;
-	text-align:center;
-        font-size:25px;
+	margin-left: 40px;
+	float: left;
+	list-style-type: none;
+	padding-top: 6px;
+	padding-bottom: 6px;
 }
-a:link, a:visited{
-	font-weight: bld;
-	text-decoration: none;
-	background-color: burlywood;/*背景颜色*/
-	color: aliceblue;/*字体颜色*/
-	width: 50px;
-	text-align: center;
-}
-a:active, a:hover{
-	background-color: red;
-}
-li{
-	padding:3px;
-	padding-left: 50px;
-	padding-right: 50px;/*或padding:3px 5px;*/
+li{/*通过设置li标签来使其横向*/
+	padding-left: 10px;
 	display: inline;
-        
+}
+a:link,a:visited{/*a标签的link属性和点击效果*/
+	font-weight: bold;/*粗体*/
+	color: darkgray;
+	text-align: center;
+	padding: 6px;
+	text-decoration: none;/*去掉a标签的下划线*/
+}
+a:hover,a:active{/*放上去和正在点击时的效果*/
+	color: dimgray;
+}
+.heading_img img{
+	border-radius: 30px;/*圆角边框*/
+	display: inline;
+	width: 26px;
+	height:26px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.2);/*阴影效果*/
+	float: right;
+	margin-left: 10px;
+
+}
+.heading_soptlight form{/*设置表单位置*/
+	float: right;
+	width: 100px;
+	height:26px;
+	position: relative;
+	margin-right: 50px;
+}
+form input{/*设计输入框*/
+	height: 26px;
+	border-radius: 30px;
+}
+.body{
+	padding: 30px;
+	height: auto;
+	width: auto;
+}
+.body_title h3{
+	font-size: 30px;
+	font-family: sans-serif;
+	color: #333333;
+}
+.body_title p{/*使内容和标题不贴在一起*/
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.footing{
+	padding-top: 20px;
+	text-align: center;
+	font-size: 10px;
+	color: darkgray;
 }
 	
-.dh{
-	width: 100%;
-	height: 375px;
-	background-color: red;
-	position: relative;/*相对布局，可进行不占位的移动操作*/
-	animation: anim 5s infinite alternate;/*anim是起的动画名称，加上infinite alternate使得动画一直执行*/
-}
-@keyframes anim{
-	0%{background-color: red;left: 0px;top: 0px}
-	25%{background-color: green;left: 100%;top: 0px;}
-	50%{background-color: yellow;left: 100%;top: 375px}
-	75%{background-color: #00ffff;left: 0px;top: 375px;}
-	100%{background-color: red;left: 0px;top: 0px;}
-}
-
-.container{
-	column-width: 50px;
-	-ms-column-width:50px;
-	column-gap: 5px;
-	-ms-column-gap:5px;
-
-}
-.container div{
-	width: 50px;
-	margin: 5px 0;
-
-}
+	
 	
 </style>
-<div class="top">
-		<div class="top_content">
-	
-	<ul>
-		<li><a href="https://yaoxin168.github.io/">主页</a></li>
-		<li><a href="">排行榜</a></li>
-		<li><a href="https://www.baidu.com/">搜索</a></li>
-		<li><a href="">我的</a></li>
-	</ul>
-	
-	
-	</div>
-	</div>
-	<div class="body">
-		<div class="body_img">
-		<div class="dh">动画</div>
-		</div>
-		
-		<div class="body_content">
-			<p>内容</p>
-			<div class="body_no">
-			<div><img src="https://ae01.alicdn.com/kf/Hec56e8bc62e540b199c67c14a71b64e5I.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hcca2e338010344f08a528623a4da9228o.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/H0acdbd4ad0f44c89a48ae7acaf7ea926K.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hec56e8bc62e540b199c67c14a71b64e5I.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hcca2e338010344f08a528623a4da9228o.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/H0acdbd4ad0f44c89a48ae7acaf7ea926K.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hec56e8bc62e540b199c67c14a71b64e5I.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hcca2e338010344f08a528623a4da9228o.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/H0acdbd4ad0f44c89a48ae7acaf7ea926K.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hec56e8bc62e540b199c67c14a71b64e5I.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hcca2e338010344f08a528623a4da9228o.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/H0acdbd4ad0f44c89a48ae7acaf7ea926K.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hec56e8bc62e540b199c67c14a71b64e5I.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hcca2e338010344f08a528623a4da9228o.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/H0acdbd4ad0f44c89a48ae7acaf7ea926K.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hec56e8bc62e540b199c67c14a71b64e5I.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hcca2e338010344f08a528623a4da9228o.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/H0acdbd4ad0f44c89a48ae7acaf7ea926K.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hec56e8bc62e540b199c67c14a71b64e5I.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hcca2e338010344f08a528623a4da9228o.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/H0acdbd4ad0f44c89a48ae7acaf7ea926K.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hec56e8bc62e540b199c67c14a71b64e5I.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hcca2e338010344f08a528623a4da9228o.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/H0acdbd4ad0f44c89a48ae7acaf7ea926K.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hec56e8bc62e540b199c67c14a71b64e5I.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hcca2e338010344f08a528623a4da9228o.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/H0acdbd4ad0f44c89a48ae7acaf7ea926K.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hec56e8bc62e540b199c67c14a71b64e5I.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hcca2e338010344f08a528623a4da9228o.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/H0acdbd4ad0f44c89a48ae7acaf7ea926K.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hec56e8bc62e540b199c67c14a71b64e5I.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hcca2e338010344f08a528623a4da9228o.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/H0acdbd4ad0f44c89a48ae7acaf7ea926K.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hec56e8bc62e540b199c67c14a71b64e5I.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hcca2e338010344f08a528623a4da9228o.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/H0acdbd4ad0f44c89a48ae7acaf7ea926K.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hec56e8bc62e540b199c67c14a71b64e5I.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hcca2e338010344f08a528623a4da9228o.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/H0acdbd4ad0f44c89a48ae7acaf7ea926K.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hec56e8bc62e540b199c67c14a71b64e5I.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hcca2e338010344f08a528623a4da9228o.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/H0acdbd4ad0f44c89a48ae7acaf7ea926K.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hec56e8bc62e540b199c67c14a71b64e5I.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hcca2e338010344f08a528623a4da9228o.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/H0acdbd4ad0f44c89a48ae7acaf7ea926K.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hec56e8bc62e540b199c67c14a71b64e5I.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hcca2e338010344f08a528623a4da9228o.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/H0acdbd4ad0f44c89a48ae7acaf7ea926K.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hec56e8bc62e540b199c67c14a71b64e5I.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hcca2e338010344f08a528623a4da9228o.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/H0acdbd4ad0f44c89a48ae7acaf7ea926K.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hec56e8bc62e540b199c67c14a71b64e5I.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/Hcca2e338010344f08a528623a4da9228o.jpg"></div>
-			<div><img src="https://ae01.alicdn.com/kf/H0acdbd4ad0f44c89a48ae7acaf7ea926K.jpg"></div>
+
+
+
+<div class="container">
+		<div class="wrapper">
+			<div class="heading">
+				<div class="heading_nav">
+					<div class="heading_title">
+						yx
+					</div>
+					<div class="heading_navbar">
+						<ul>
+							<li><a href="#">首页</a></li>
+							<li><a href="#">职业课程</a></li>
+							<li><a href="#">技术问答</a></li>
+							<li><a href="#">我的</a></li>
+						</ul>
+					</div>
+					<div class="heading_img">
+						<img src="https://ae01.alicdn.com/kf/H94a11edb74444d8db0a9391a13cc1d84U.jpg">
+					</div>
+					<div class="heading_soptlight">
+						<form>
+							<input type="text">
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="body">
+				<div class="body_title">
+					<h3>嘿嘿嘿</h3>
+					<p>这是yx的网页，VS我等会我必须结算价相比银行借款公司介绍敢撒谎今晚方法的线程就就很尴尬</p>
+				</div>
+				<hr/>
+				<hr/>
 			</div>
 		</div>
-	</div>
-	<div class="footing">
-		<div class="footing_content"></div>
-		<div class="footing_subnav"></div>
+		<div class="footing">
+			@yaoxin168
+		</div>
 	</div>
